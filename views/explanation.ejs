@@ -1,0 +1,72 @@
+<% include ./partials/header %>
+    <div id="explanation" class="container">
+        <h1>A little about this website</h1>
+        <p>The website was made as a course project. It was made using JQuery, NodeJS, ExpressJS, Bootstrap, Twitter API, IBM ToneAnalyzer and is using MongoDB database.</p>
+        <p>This is a site was made in the image of Facebook.</p>
+        <p>It has the following features:
+            <ul>
+                <li>
+                    <span class="explanation-categories">Posting posts:</span>
+                    <ul>
+                        <li>Containing text only.</li>
+                        <li>Containing uploaded image and text.</li>
+                        <li>Containing images from links and text.</li>
+                        <li>With different privacy (private or public).</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="explanation-categories">Editting posts:</span>
+                    <ul>
+                        <li>Changing post text.</li>
+                        <li>Change post image, as well as a different source.</li>
+                        <li>Editting post privacy.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="explanation-categories">Commenting on posts:</span>
+                    <ul>
+                        <li>Posting comments to posts.</li>
+                        <li>Editting the comments on the posts.</li>
+                        <li>Deleting the comments from the post.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="explanation-categories">A bot</span> - The bot samples a Tweet of a given personality on Twitter (In this case - realDonaldTrump or prattprattpratt) every 50 minutes and posts their Tweet content as well as the tone analyzed by IBM ToneAnalyzer in their respective accounts. 
+                    The amount of posts for the bot is limited to 10 and the oldest one will be deleted.
+                </li>
+                <li>
+                    <span class="explanation-categories">Sharing posts</span> - Sharing a post will take all the content of the post and post it again, with the author being the current user.
+                </li>
+                <li>
+                    <span class="explanation-categories">Liking a post</span> - Each post has a like counter which increases or decreases when someone likes or unlikes a post.
+                </li>
+                <li>
+                    <span class="explanation-categories">Adding a friend</span> - A user can only see posts created by someone they added as a friend and only if said post has been marked as public.
+                </li>
+                <li>
+                    <span class="explanation-categories">Searching for users</span> - Searching for users is done live and '*' returns everyone. The search however does not return those already added as a friend.
+                </li>
+            </ul>
+        </p>
+        
+        <span class="explanation-categories">How to use the website:</span>
+        <p> 
+            Once a user is registered, they can post anything they would like. Anything marked as "Private" when creating a post will not be shown to any other user, unless later editted to "Public".<br/>
+            To add users, the user will need to search in the search box and then click on the user they would like to add. Searching and adding "realDonaldTrump" will show all the Tweets created when the bot took a sample.<br/>
+            Only the author of the post or the comment can edit or delete them.
+        </p>
+        <span class="explanation-categories">Already created users:</span>
+        <ul>
+            <li>Username: a, password: a</li>
+            <li>Username: q, password: q</li>
+            <li>Username: w, password: w (A user without anyone added as friends)</li>
+            <li>Username: realDonaldTrump, password: a (The bot)</li>
+            <li>Username: prattprattpratt, password: a (Second bot for when the ToneAnalyzer is unable to analyzed the tone of the Tweet of the first bot)</li>
+        </ul>
+        
+        <p>
+            Please feel free to login or register.
+        </p>
+    </div>
+
+<% include ./partials/footer %>

@@ -1,0 +1,234 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#post-list 
+{
+    display: flex; 
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.glyphicon-thumbs-up
+{
+    font-size: 2.5em;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.like-amount
+{
+    font-size: 2em;
+    display: inline-block;
+    line-height: 100%;
+    vertical-align: bottom;
+}
+
+/* Allows \n to be accepted for new line in HTML */
+.post-description
+{
+    white-space: pre-wrap;
+}
+
+.glyphicon-share
+{
+    font-size: 1.2em;
+}
+
+.row {
+    width: 100%;
+    margin: 0;
+}
+
+
+
+.blue-like
+{
+    color: red;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+    overflow:hidden
+}
+
+.thumbnail .caption-full {
+    padding:  9px;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.page-titles {
+    text-align: center;
+}
+
+.post-author {
+    font-weight: bold;
+}
+
+.post-description {
+    margin-left: 10px;
+}
+
+#login-well #register-well{
+    width: 50%;
+}
+
+.magic {
+    display: none;
+}
+
+#posts-edit {
+    width: 70%; 
+    margin: 0 auto;
+}
+
+#edit-image {
+    max-width: 70%;
+    max-height: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+#friend-search {
+    margin-top: 8px;
+}
+
+#results {
+    background-color: white;
+    position: absolute;
+    border-radius: 0 0 10px 10px;
+    border: 1px black solid;
+    z-index: 10;
+    max-height: 100px;
+    overflow-y: scroll;
+}
+
+#results>ul {
+    list-style: none;
+    padding-left: 12px;
+}
+#results>ul>li>a {
+    text-decoration: none;
+}
+
+#trademark {
+    display: inline-block;
+    font-size: 0.6em;
+    vertical-align: top;
+}
+
+.results-hide {
+    display: none;
+}
+
+.rights {
+    position: relative;
+    height: auto;
+}
+
+.rights span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right:0;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.thumbnail img {
+    height: 200px;
+}
+
+.thumbnail .well {
+    margin-bottom: 0;
+}
+
+/* Search results scrollbar change */
+#results::-webkit-scrollbar {
+    width: 14px;
+}
+
+#results::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1); 
+    border-radius: 10px;
+
+}
+
+#results::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1); 
+}
+
+#new-post {
+    display: none;
+    background-color: #DFE2DB;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.comment-text {
+    display: none;
+    width: 100%;
+}
+
+.abrakadabra {
+    display: none;
+}
+
+.product-image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: none;
+}
+
+.product-image-overlay .product-image-overlay-close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    line-height: 35px;
+    font-size: 20px;
+    color: #eee;
+    text-align: center;
+    cursor: pointer;
+}
+
+.product-image-overlay img {
+    width: auto;
+    max-width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.explanation-categories {
+    font-weight: bold;
+}
+
+#explanation p {
+    padding-left: 8px;
+}

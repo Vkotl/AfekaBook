@@ -1,0 +1,26 @@
+<div class="well">
+    <div class="new-comment">
+        <button class="btn btn-success">Add New Comment</button>
+        <input type="hidden" name="_csrf" value="<%= csrf %>">
+        <input type="text" class="comment-text" placeholder="Enter a comment">
+    </div>
+    <hr>
+    <div>
+    <% post.comments.sort(function(a,b){return b.date - a.date;}).forEach(function(comment){ %>
+        <div class="row">
+            <div id="<%= comment._id %>" class="col-md-12">
+                <strong><%= comment.author.username %> </strong>
+                <span class="pull-right"><%= comment.date.getDate(); %>/<%= comment.date.getMonth()+1; %>/<%= comment.date.getFullYear(); %> - <%= comment.date.getHours(); %>:<%= ('0'+comment.date.getMinutes()).slice(-2); %>:<%= ('0'+comment.date.getSeconds()).slice(-2); %></span>
+                <p>
+                    <%= comment.text %>
+                </p>
+                 <% if(currentUser && comment.author.id.equals(currentUser._id)) { %>
+                    <button class="btn btn-xs btn-warning comment-edit" href="/posts/<%= post._id %>/comments/<%= comment._id %>/edit">Edit</button>
+                        
+                    <input type="hidden" name="_csrf" value="<%= csrf %>">
+                    <button class="btn btn-xs btn-danger comment-delete">Delete</button>
+                <% } %>
+            </div>
+        </div>
+    <% }) %>
+</div>

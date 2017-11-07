@@ -1,0 +1,8 @@
+<ul>
+    <% users.forEach(function(user){ %>
+            <!-- Check if the user is logged in (currentUser) && check if currentUser is not "user" && check if the user is not in currentUser friend list -->
+        <% if(currentUser && !user._id.equals(currentUser.id) && !checkInFriends(currentUser, user)) { %>
+            <li><a href="/friends/<%= user._id %>"><%= user.username %></a></li>
+        <% } %>
+    <% }); %>
+</ul>

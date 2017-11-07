@@ -1,0 +1,35 @@
+<% include partials/header %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"><h1 class="text-center">Sign up!</h1></div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <form action="/register" method="post">
+                <div id="register-well" class="well">
+                    <input type="hidden" name="_csrf" value="<%= csrf %>">
+                    <div class="form-group">
+                        <label for="registerUsername">Username</label>
+                        <input class="form-control" type="text" id="registerUsername" name="username" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Password</label>
+                        <input class="form-control" type="password" id="registerPassword" name="password" placeholder="Password">
+                    </div>
+                    <div class="row">
+                         <div class="col-md-4"></div>
+                         <div class="col-md-4"><button type="submit" class="btn btn-primary btn-lg">Sign up</button></div>
+                         <div class="col-md-4"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+<% include partials/footer %>

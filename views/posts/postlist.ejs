@@ -1,0 +1,42 @@
+<% posts.forEach(function(post){ %>
+    <!-- Check if user is logged in (currentUser) -->
+    <% if(currentUser) { %>
+    <!-- Check if the author of the post is in the logged in user's friend list && check if the post is not personal(public) || check if the logged in user is the author of the post. -->
+        <% if((checkInFriends(currentUser, post.author) && !post.personal) || post.author.id.equals(currentUser._id)) { %>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div id="<%= post._id %>" class="thumbnail">
+                        <div class="caption">
+                            <% if(currentUser && post.author.id.equals(currentUser._id)) { %>
+                                <button class="btn btn-warning btn-xs">Edit</button>
+                                <input type="hidden" name="_csrf" value="<%= csrf %>">
+                                <button class="btn btn-xs btn-danger">Delete</button>
+                            <% } else { %>
+                                <input type="hidden" name="_csrf" value="<%= csrf %>">
+                                <i class="glyphicon glyphicon-share"></i>
+                            <% } %>
+
+                            <h6 class="pull-right"><%= post.date.getDate(); %>/<%= post.date.getMonth()+1; %>/<%= post.date.getFullYear(); %> - <%= post.date.getHours(); %>:<%= ('0'+post.date.getMinutes()).slice(-2); %>:<%= ('0'+post.date.getSeconds()).slice(-2); %></h4>
+                            <h3 class="post-author"><%= post.author.username %>:</h3>
+                            <h4 class="post-description"><%= post.description %></h4>
+                        </div>
+                        <% if(post.image !== "") { %>
+                            <img class="post-image" src="<%= post.image %>">
+                        <% } %>
+                        
+                        <i class="glyphicon glyphicon-thumbs-up <% if(post.likes.users.findIndex(i =>currentUser._id.equals(i.id)) > -1) { %> blue-like <% } %> { "></i>
+                        <span class="like-amount"> <% if(post.likes.amount > 0) { %>  <%= post.likes.amount %> likes  <% } %></span>
+                        
+                        <button class="show-comments pull-right btn btn-success">Comments</button>
+                        <div id="comments-<%= post._id %>" class="abrakadabra"></div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        <% } %>    
+    <% } %>
+<% }); %>
+<div class="product-image-overlay"><span class="product-image-overlay-close">x</span><img src="" /></div>
+<script src="/js/filelink.js"></script>
+<script src="/js/posts.js"></script>
