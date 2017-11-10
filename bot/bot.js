@@ -194,8 +194,8 @@ console.log("Posting bot has started.");
 
 runner();
 
-// Post every 50 minutes. 
-setInterval(runner, 3000000);
+// Post every 120 minutes. 
+setInterval(runner, 720000);
 // Post every 5 minutes. 
 // setInterval(runner, 300000);
 // Post every 1 minutes. 
