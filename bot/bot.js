@@ -42,8 +42,8 @@ function tweetTone(person) {
 			
 			// Tone analyzer API configuration.
 			var tone_analyzer = new ToneAnalyzerV3({
-				username:  "dcd79266-0445-41e7-a632-1db5b8cc1156",
-				password: "WFREgaAU88xw",
+				username:  "***************",
+				password: "**************",
 				version_date: '2017-10-14',
 				headers: {
     				'X-Watson-Learning-Opt-Out': 'true'
