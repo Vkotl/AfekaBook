@@ -37,7 +37,14 @@ function tweetTone(person) {
 		if (!err) {
 			
 			// Grab text of the tweet.
-			dominant.description = data.statuses[0].text;
+			if (data.statuses[0] !== undefined)
+			{
+				dominant.description = data.statuses[0].text;
+			}
+			else
+			{
+				dominant.description = "Failed to retrieve the tweet.";
+			}
 			
 			
 			// Tone analyzer API configuration.
@@ -46,7 +53,7 @@ function tweetTone(person) {
 				password: "**************",
 				version_date: '2017-10-14',
 				headers: {
-    				'X-Watson-Learning-Opt-Out': 'true'
+					'X-Watson-Learning-Opt-Out': 'true'
 				}
 			});
 			
