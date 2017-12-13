@@ -17,7 +17,7 @@ postFunctionsObj.createNewPost = function(res, postdata)
         else
         {
             // redirect back to posts page.
-            res.redirect("/");
+            res.redirect("/index");
         }
     });
 }
@@ -28,7 +28,7 @@ postFunctionsObj.fileUpload = function(req, res, files, callback)
     if(!files.image)
     {
         req.flash("error", "No file was added.");
-        return res.redirect("/");
+        return res.redirect("/index");
     }
     // `image` is the name of the <input> field of type `file`
     var old_path = files.image.path,
@@ -73,7 +73,7 @@ postFunctionsObj.fileUpload = function(req, res, files, callback)
     else
     {
         req.flash("error", "Image format was incorrect.");
-        res.redirect("/");
+        res.redirect("/index");
     }
 }
 
