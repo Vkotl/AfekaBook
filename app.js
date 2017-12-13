@@ -29,7 +29,6 @@ var commentRoutes = require("./routes/comments"),
 
 // Connecting to mongoose.
 mongoose.connect(process.env.DATABASEURL, {useMongoClient: true});
-// mongoose.connect("mongodb://vadim:kotl@ds135866.mlab.com:35866/afeka_book", {useMongoClient: true});
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
