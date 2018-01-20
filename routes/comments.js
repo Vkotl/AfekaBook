@@ -29,7 +29,7 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
                     comment.date = new Date(Date.now() + 10800000);
                     // Save comment.
                     comment.save();
-                    post.comments.push(comment);
+                    post.comments.push(comment._id);
                     post.save();
                     req.flash("success", "Successfully added a comment!");
                     res.redirect("/posts/");

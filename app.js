@@ -28,7 +28,7 @@ var commentRoutes = require("./routes/comments"),
     userRoutes = require("./routes/users");
 
 // Connecting to mongoose.
-mongoose.connect(process.env.DATABASEURL, {useMongoClient: true});
+mongoose.connect(process.env.DATABASEURL);
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");

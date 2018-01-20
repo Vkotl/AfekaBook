@@ -169,7 +169,7 @@ router.put("/:id", middleware.checkPostOwnership, function(req, res){
    Post.findById(req.params.id, function(err, postToUpdate){
        if(err)
        {
-           res.redirect("/");
+           res.redirect("/index");
        }
        else
        {
@@ -228,7 +228,7 @@ router.put("/:id", middleware.checkPostOwnership, function(req, res){
                     }
                 }
             });
-            res.redirect("/");
+            res.redirect("/index");
        }
    });
 });

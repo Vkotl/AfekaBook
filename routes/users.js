@@ -94,7 +94,7 @@ router.get("/:id", function(req, res)
                     foundMe.friends.push(friend);
                     foundMe.save();
                     req.flash("success", "Successfully added a friend!");
-                    res.redirect("/");
+                    res.redirect("/index");
                 }
             });
         }
