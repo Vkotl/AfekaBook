@@ -1,8 +1,8 @@
 The website is located at https://afekabook-vadimkot.c9users.io/.
 
-The website was made as a course project. It was made using JQuery, NodeJS, ExpressJS, Bootstrap, Twitter API, IBM ToneAnalyzer and is using MongoDB database.
+The website was made as a course project. It was made using JQuery, NodeJS, ExpressJS, Bootstrap, Twitter API, IBM ToneAnalyzer and is using MongoDB database. Everything was writting in Cloud9 (Now owned by Amazon and is part of AWS).
 
-The website also has a development version which updates the GitHub. When decided, that version from GitHub is used to update production version, which is this one.
+The website also has a development version which updates the GitHub. When decided, that version from GitHub is used to update production version.
 
 This is a site which was made in the image of Facebook.
 
